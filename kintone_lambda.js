@@ -3,21 +3,19 @@ var https = require('https');
 
 // Set kintone
 var DOMAIN = '2t48w.kintone.com';
-var APP_ID = 39;
-//var LOGIN_NAME = 'Your Login name';
-//var PASSWORD = 'Your Password';
+var APP_ID = 41;
+
 
 
 /////////////////////////////////////////
-//var AUTH_VALUE = new Buffer(LOGIN_NAME + ':' + PASSWORD).toString('base64');
-var AUTH_VALUE = '88zn5qdDubvvvghHrwmNm50BAYBsQVdiY9LSlJDw';
+var AUTH_VALUE = 'uAj7QNQfWeOb424BawjF0TF07ONsuNwt3MmoTdAA';
 var headers = { 'X-Cybozu-API-Token': AUTH_VALUE };
 
 exports.handler = function (event, context) {
     var options = {
         hostname: DOMAIN,
         port: 443,
-        path: '/k/v1/records.json?app=' + APP_ID,
+        path: '/k/v1/records.json?app=' + APP_ID + '&query=order%20by%20CUSIP%20asc',
         method: 'GET',
         headers: headers
     };

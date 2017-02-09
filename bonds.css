@@ -1,3 +1,45 @@
 .bondsTable table, th, td{
-   border: 1px solid black;
+   	/*border: 1px solid black;*/
+    padding: 5px;
 }
+.bondsTable th{
+	font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+.bondsTable caption{
+	font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+#BondsData{
+	overflow-x:auto;
+    overflow-y:auto;
+}
+.bondsTable .right-align{
+	text-align: right;	
+    color: black;
+}
+.bondsTable .right-align-positive{
+	text-align: right;
+    color: blue;	
+}
+.bondsTable .right-align-negative{
+	text-align: right;
+    color: red;	
+}
+.bondsTable .category{
+	font-weight: bold;
+    text-decoration: underline;
+}
+.site_navigation {
+	background-color:#306D88;
+    color: white;
+}
+
+a, a label{
+	cursor: pointer;
+}
+

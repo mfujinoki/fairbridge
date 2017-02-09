@@ -1,0 +1,2 @@
+API Gateway:
+Deploy after the setting changes.
