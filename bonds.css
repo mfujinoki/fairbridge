@@ -1,3 +1,4 @@
+/*Bonds Table CSS*/
 .bondsTable table, th, td{
    	/*border: 1px solid black;*/
     padding: 5px;
@@ -34,6 +35,8 @@
 	font-weight: bold;
     text-decoration: underline;
 }
+/*End*/
+/*CSS for all*/
 .site_navigation {
 	background-color:#306D88;
     color: white;
@@ -42,4 +45,34 @@
 a, a label{
 	cursor: pointer;
 }
-
+/*End*/
+/*Documnet Library CSS*/
+.documentsTable table, th, td{
+   	/*border: 1px solid black;*/
+    padding: 5px;
+}
+.documentsTable th{
+	font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+.documentsTable caption{
+	font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.documentsTable .left-align{
+	text-align: left;	
+    color: black;
+}
+.documentsTable .center-align{
+	text-align: center;	
+    color: black;
+}
+#documents{
+	overflow-x:auto;
+    overflow-y:auto;
+}
+/*End*/

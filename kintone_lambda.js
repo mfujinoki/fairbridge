@@ -15,7 +15,7 @@ exports.handler = function (event, context) {
     var options = {
         hostname: DOMAIN,
         port: 443,
-        path: '/k/v1/records.json?app=' + APP_ID + '&query=order%20by%20CUSIP%20asc',
+        path: '/k/v1/records.json?app=' + APP_ID + '&query=order%20by%20AS_OF_DATE%20desc%20CUSIP%20asc%20limit%20100',
         method: 'GET',
         headers: headers
     };

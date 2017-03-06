@@ -61,7 +61,7 @@ $(document).ready(function(){
         $.getJSON('https://e96mspfwij.execute-api.us-west-2.amazonaws.com/Production/bondrecords',function(data){
             var infoHTML = '';
             infoHTML += '<table class="bondsTable" align="center" width="100%">';
-            infoHTML += '<caption>Puerto Rico Bond activity</caption><tr/>';
+            infoHTML += '<caption>Puerto Rico Bond activity Top 100</caption><tr/>';
             infoHTML += '<thead>';
             infoHTML += '<tr>';
             infoHTML += '<th>CUSIP</th>';
@@ -258,11 +258,11 @@ function getDocuments(topic)
     }
     $.get(' https://b88ufu1kef.execute-api.us-west-2.amazonaws.com/Production/fairbridge?list-type=2&prefix=' + prefix,function(data){
         var infoHTML = '';
-        infoHTML += '<table class="bondsTable" align="right" width="80%">';
+        infoHTML += '<table class="documentsTable" align="right" width="80%">';
         infoHTML += '<caption>Document Library</caption><tr/>';
         infoHTML += '<thead>';
         infoHTML += '<tr>';
-        infoHTML += '<th>Document Name</th>';
+        infoHTML += '<th class="left-align">Document Name</th>';
         infoHTML += '<th>Topic</th>';
         infoHTML += '<th>Date</th>';
         infoHTML += '</tr>';
@@ -272,8 +272,8 @@ function getDocuments(topic)
             if(Number($(this).find("Size").text()) > 0)
             {
                 infoHTML += '<tr><td><a target="_blank" href="'+ url + $(this).find("Key").text() + '">' + $.fileName($(this).find("Key").text()) + '</a></td>';
-                infoHTML += '<td>' + $.topic($(this).find("Key").text()) + '</td>';
-                infoHTML += '<td>' + $.date($(this).find("LastModified").text()) + '</td></tr>';
+                infoHTML += '<td class="center-align">' + $.topic($(this).find("Key").text()) + '</td>';
+                infoHTML += '<td class="center-align">' + $.date($(this).find("LastModified").text()) + '</td></tr>';
             }
         });
         infoHTML += '</tbody></table>';
